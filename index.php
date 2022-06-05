@@ -14,6 +14,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="recursos/clinica.png">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,10 +30,10 @@
                 </div>
                 <h2 class="text-center color-text">Inicie Sesión</h2>   
                 <div class="form-group">
-                    <input type="text" class="form-control" id="txtUsuario" name="username" placeholder="Usuario" required="required">
+                    <input type="text" class="form-control" id="txtUsuario" placeholder="Usuario" required="required">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="txtContra" name="password" placeholder="Contraseña" required="required">
+                    <input type="password" class="form-control" id="txtContra" placeholder="Contraseña" required="required">
                 </div>        
                 <div class="form-group">
                     <button type="submit" onclick="IniciarSession()" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>

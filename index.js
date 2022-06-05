@@ -15,9 +15,10 @@ function IniciarSession() {
   } else {
     $.post(
       "controlador/login.php",
-      { usuario: usuario, contra: contra },
-      function (rpta) {
-        if (rpta.estado == 1) {
+      { tipo: "iniciar", usuario: usuario, contra: contra },
+      function (respuesta) {
+        if (respuesta.estado == 1) {
+          window.location.href = "vista/menu.php";
         } else {
           $("#modalError").modal("show");
         }
