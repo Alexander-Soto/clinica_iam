@@ -44,7 +44,7 @@
                         <a href="#"><img src="../recursos/factura.png"> Facturas</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/vademecum.png"> Vademecum</a>
+                        <a href="#"  onclick="CargarVademecum()"><img src="../recursos/vademecum.png"> Vademecum</a>
                     </li>
                     <li>
                         <a href="#"><img src="../recursos/cie10.png"> CIE10</a>
