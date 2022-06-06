@@ -34,7 +34,3 @@ function CargarVademecum() {
 function CargarCIE10() {
   $("#divContenido").load("cie10/cie10.php");
 }
-
-function CargarServicios() {
-  $("#divContenido").load("servicios/servicios.php");
-}

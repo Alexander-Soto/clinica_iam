@@ -41,22 +41,19 @@ if ($_SESSION['usuario'] == '') {
                         <a href="#" onclick="CargarPacientes()"><img src="../recursos/registro.png"> Pacientes</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/consulta.png"> Consulta</a>
+                        <a href="#" onclick="CargarConsulta()"><img src="../recursos/consulta.png"> Consulta</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/agenda.png"> Agenda</a>
+                        <a href="#" onclick="CargarAgenda()"><img src="../recursos/agenda.png"> Agenda</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/factura.png"> Facturas</a>
+                        <a href="#" onclick="CargarFacturas()"><img src="../recursos/factura.png"> Facturas</a>
                     </li>
                     <li>
-                        <a href="#"  onclick="CargarVademecum()"><img src="../recursos/vademecum.png"> Vademecum</a>
+                        <a href="#" onclick="CargarVademecum()"><img src="../recursos/vademecum.png"> Vademecum</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/cie10.png"> CIE10</a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../recursos/servicios.png"> Servicios</a>
+                        <a href="#" onclick="CargarCIE10()"><img src="../recursos/cie10.png"> CIE10</a>
                     </li>
                 </ul>
                 <div style="padding: 20px;">
