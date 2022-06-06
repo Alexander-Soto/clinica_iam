@@ -35,7 +35,7 @@
                         <a href="#" onclick="CargarPacientes()"><img src="../recursos/registro.png"> Pacientes</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/consulta.png"> Consulta</a>
+                        <a href="#" onclick="CargarConsulta()"><img src="../recursos/consulta.png"> Consulta</a>
                     </li>
                     <li>
                         <a href="#"><img src="../recursos/agenda.png"> Agenda</a>
