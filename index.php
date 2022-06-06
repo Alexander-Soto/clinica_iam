@@ -24,7 +24,7 @@
     </head>
     <body>
         <div class="login-form">
-            <form>
+            <form id="formLogin">
                 <div class="avatar">
                     <img src="recursos/doctor.png" alt="Avatar">
                 </div>
@@ -39,7 +39,7 @@
                     <button type="submit" onclick="IniciarSession()" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
                 </div>
                 <div class="bottom-action clearfix">
-                    <a href="#myModal" class="float-right" data-toggle="modal" style="color: white;">¿Olvidó su contraseña?</a>
+                    <a href="#" onclick="Modal()" class="float-right" data-toggle="modal" style="color: white;">¿Olvidó su contraseña?</a>
                 </div>
             </form>
         </div>
@@ -77,7 +77,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <p>El usuario o la contraseña que ingresó, no son los correctos.</p>
+                        <p id="textoError"></p>
                     </div>
                     <div class="modal-footer justify-content-center">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

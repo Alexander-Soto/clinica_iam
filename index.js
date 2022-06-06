@@ -7,11 +7,21 @@
  * @date 2022-06-05 12:32:21            *
  ************************************* **/
 
+function Modal() {
+  $("#myModal").modal("show");
+}
+
 function IniciarSession() {
+  document
+    .getElementById("formLogin")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+    });
   let usuario = $("#txtUsuario").val();
   let contra = $("#txtContra").val();
   if (usuario == "" || contra == "") {
-    // Indica al usuario que complete los campos.
+    $("#textoError").html("Por favor llene todos los campos");
+    $("#modalError").modal("show");
   } else {
     $.post(
       "controlador/login.php",
@@ -20,6 +30,7 @@ function IniciarSession() {
         if (respuesta.estado == 1) {
           window.location.href = "vista/menu.php";
         } else {
+          $("#textoError").html(respuesta.mensaje);
           $("#modalError").modal("show");
         }
       },
