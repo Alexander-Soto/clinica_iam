@@ -32,7 +32,7 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li>
-                        <a href="#"><img src="../recursos/registro.png"> Registro</a>
+                        <a href="#" onclick="CargarPacientes()"><img src="../recursos/registro.png"> Pacientes</a>
                     </li>
                     <li>
                         <a href="#"><img src="../recursos/consulta.png"> Consulta</a>
