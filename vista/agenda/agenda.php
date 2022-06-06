@@ -85,9 +85,9 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Doctor</th>
+                        <th scope="col">Fecha/hora</th>
                     </tr>
                 </thead>
                 <tbody class="table-light">
