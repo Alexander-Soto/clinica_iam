@@ -41,10 +41,10 @@ if ($_SESSION['usuario'] == '') {
                         <a href="#" onclick="CargarPacientes()"><img src="../recursos/registro.png"> Pacientes</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/consulta.png"> Consulta</a>
+                        <a href="#" onclick="CargarConsulta()"><img src="../recursos/consulta.png"> Consulta</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/agenda.png"> Agenda</a>
+                        <a href="#" onclick=" CargarAgenda()"><img src="../recursos/agenda.png"> Agenda</a>
                     </li>
                     <li>
                         <a href="#"><img src="../recursos/factura.png"> Facturas</a>
