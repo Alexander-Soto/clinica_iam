@@ -28,12 +28,12 @@
             <form>
                 <div class="form-row">
                     <div class="form-group col-md-5">
-                        <label class="lbForm" for="txtNombres">Categoria: </label>
-                        <input type="text" class="form-control" id="txtNombres" placeholder="Categoria">
+                        <label class="lbForm" for="txtPrincipioActivo">Principio Activo: </label>
+                        <input type="text" class="form-control" id="txtPrinciooActivo" placeholder="Principio Activo">
                     </div>
                     <div class="form-group col-md-5">
-                        <label class="lbForm" for="txtApellidos">Nombre: </label>
-                        <input type="text" class="form-control" id="txtApellidos" placeholder="Apellidos">
+                        <label class="lbForm" for="txtPrecauciones">Precauciones </label>
+                        <input type="text" class="form-control" id="txtPrecauciones" placeholder="Precauciones">
                     </div>
                     <div class="form-group col-md-2 text-center">
                         <br>
@@ -43,12 +43,12 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-5">
-                        <label class="lbForm" for="txtDui">DUI: </label>
-                        <input type="text" class="form-control" id="txtDui" placeholder="00000000-0">
+                        <label class="lbForm" for="txtAccionTeraupeutica">Accion Terapeutica: </label>
+                        <input type="text" class="form-control" id="txtAccionTeraupeutica" placeholder="Accion Teraupeutica">
                     </div>
                     <div class="form-group col-md-5">
-                        <label class="lbForm" for="txtTelefono">Teléfono: </label>
-                        <input type="text" class="form-control" id="txtTelefono" placeholder="+503 0000 - 0000">
+                        <label class="lbForm" for="txtDosificacion">Dosificacion: </label>
+                        <input type="text" class="form-control" id="txtDosificacion" placeholder="Dosificacion">
                     </div>
                     <div class="form-group col-md-2 text-center">
                         <br>
@@ -57,9 +57,13 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-10">
-                        <label class="lbForm" for="txtDireccion">Dirección: </label>
-                        <input type="text" class="form-control" id="txtDireccion" placeholder="Dirección de Residencia">
+                    <div class="form-group col-md-5">
+                        <label class="lbForm" for="txtIndicaciones">Indicaciones: </label>
+                        <input type="text" class="form-control" id="txtIndicaciones" placeholder="Indicaciones">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label class="lbForm" for="txtInteracciones">Interacciones: </label>
+                        <input type="text" class="form-control" id="txtInteraaciones" placeholder="Interacciones">
                     </div>
                     <div class="form-group col-md-2 text-center">
                         <br>
@@ -68,35 +72,40 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label class="lbForm" for="txtOcupación">Ocupacion: </label>
-                        <input type="text" class="form-control" id="txtOcupación" placeholder="Ocupación">
+                    <div class="form-group col-md-5">
+                        <label class="lbForm" for="txtMarca">Marca: </label>
+                        <input type="text" class="form-control" id="txtMarca" placeholder="Marca">
                     </div>
-                    <div class="form-group col-md-2">
-                        <label class="lbForm" for="txtFechNac">Fecha de Nacimiento: </label>
-                        <input type="date" class="form-control" id="txtFechNac">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label class="lbForm" for="selSexo">Sexo: </label>
-                        <select id="selSexo" class="form-control">
-                            <option value="0">Seleccione</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Femenino</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label class="lbForm" for="selEstadoCivil">Estado Civil: </label>
-                        <select id="selEstadoCivil" class="form-control">
-                            <option value="0">Seleccione</option>
-                            <option value="1">Solter(a)</option>
-                            <option value="2">Casad(a)</option>
-                            <option value="3">Divorciad(a)</option>
-                            <option value="4">Viud(a)</option>
-                        </select>
+                    <div class="form-group col-md-5">
+                        <label class="lbForm" for="txtContraindicaciones">Contra Indicaciones: </label>
+                        <input type="text" class="form-control" id="txtContraindicaciones" placeholder="Contra Indicaciones">
                     </div>
                     <div class="form-group col-md-2 text-center">
+                        
                     </div>
                 </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label class="lbForm" for="txtPropiedades">Propiedades: </label>
+                        <input type="text" class="form-control" id="txtPropiedades" placeholder="Propiedades">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label class="lbForm" for="txtSobreDosificacion">Sobre Dosificacion: </label>
+                        <input type="text" class="form-control" id="txtSobreDosificacion" placeholder="Contra Indicaciones">
+                    </div>
+                    <div class="form-group col-md-2 text-center">
+                        
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                        <label class="lbForm" for="txtReaccionesAdversas">Reacciones Adversas: </label>
+                        <input type="text" class="form-control" id="txtReaccionesAdversas" placeholder="Reacciones Adversas">
+                    </div>
+                   
+                </div>
+               
             </form>
             <div class="row" style="padding: 20px;">
                 <table class="table table-sm">
