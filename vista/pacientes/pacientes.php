@@ -7,6 +7,11 @@
  * @version 1.0.0                       *
  * @date 2022-06-05 12:32:21            *
  ************************************* **/
+session_start();
+if ($_SESSION['usuario'] == '') {
+    session_destroy();
+    header('Location: ../../index.php');
+} else {
 ?>
 
 <!DOCTYPE html>
@@ -69,8 +74,8 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label class="lbForm" for="txtOcupación">Ocupacion: </label>
-                        <input type="text" class="form-control" id="txtOcupación" placeholder="Ocupación">
+                        <label class="lbForm" for="txtOcupacion">Ocupacion: </label>
+                        <input type="text" class="form-control" id="txtOcupacion" placeholder="Ocupación">
                     </div>
                     <div class="form-group col-md-2">
                         <label class="lbForm" for="txtFechNac">Fecha de Nacimiento: </label>
@@ -134,3 +139,7 @@
         </div>
     </body>
 </html>
+
+<?php 
+} 
+?>

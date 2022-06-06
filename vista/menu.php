@@ -7,6 +7,11 @@
  * @version 1.0.0                       *
  * @date 2022-06-05 12:32:21            *
  ************************************* **/
+session_start();
+if ($_SESSION['usuario'] == '') {
+    session_destroy();
+    header('Location: ../index.php');
+} else {
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +49,7 @@
                         <a href="#"><img src="../recursos/factura.png"> Facturas</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/vademecum.png"> Vademecum</a>
+                        <a href="#" onclick="CargarVademecum()"><img src="../recursos/vademecum.png"> Vademecum</a>
                     </li>
                     <li>
                         <a href="#"><img src="../recursos/cie10.png"> CIE10</a>
@@ -71,3 +76,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     </body>
 </html>
+
+<?php 
+} 
+?>
