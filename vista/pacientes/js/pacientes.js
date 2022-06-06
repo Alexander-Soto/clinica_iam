@@ -56,6 +56,7 @@ function AgregarPaciente() {
     function (respuesta) {
       if (respuesta.estado == 1) {
         ResetearControles();
+        LlenarTablaPacientes();
         alert(respuesta.mensaje);
       } else {
         alert(respuesta.mensaje);

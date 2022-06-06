@@ -28,7 +28,7 @@ function CargarFacturas() {
 }
 
 function CargarVademecum() {
-  $("#divContenido").load("productos/productos.php");
+  $("#divContenido").load("vademecum/vademecum.php");
 }
 
 function CargarCIE10() {
