@@ -50,27 +50,27 @@
         <br>
         <form>
             <div class="form-row">
-                <div class="input-group col-md-11">
-                    <div class="form-outline col-md-5">
-                        <input type="search" id="form1" class="form-control" placeholder="Paciente" />
-                    </div>
-                    <span class="input-group-text border-0" id="search-addon">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <div class="form-group col-md-2">
+
+                <div class="form-outline col-md-5">
+                    <input type="search" id="form1" class="form-control" placeholder="Paciente" />
                 </div>
-                    <div class="form-outline col-md-3">
-                        <input type="search" id="form1" class="form-control" placeholder="Dui" />
-                    </div>
-                    <span class="input-group-text border-0" id="search-addon">
-                        <i class="fas fa-search"></i>
-                    </span>
+                <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <div class="form-group col-md-1">
                 </div>
+                <div class="form-outline col-md-3">
+                    <input type="search" id="form1" class="form-control" placeholder="Dui" />
+                </div>
+                <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </span>
+
             </div>
             <br>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="txtNombres" placeholder="Nombres">
+                    <input type="text" class="form-control" id="txtNombres" placeholder="Nombre">
                 </div>
                 <div class="form-group col-md-2">
                 </div>
@@ -81,5 +81,50 @@
 
                     <button type="submit" class="btn btn-success" id="btnAggPaciente">Siguiente</button>
                     <br>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="date" class="form-control" id="txtNombres" placeholder="Fecha de nacimiento">
+                </div>
+                <div class="form-group col-md-3">
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control" id="txtApellidos" placeholder="Dui">
+                </div>
+                <div class="form-group col-md-3 text-center">
+
+                    <button type="submit" class="btn btn-danger" id="btnAggPaciente">Cancelar</button>
+                    <br>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="txtNombres" placeholder="Telefono">
+                </div>
+                <div class="form-group col-md-1">
+                </div>
+                <div class="form-group col-md-2">
+                    <select id="selSexo" class="form-control">
+                        <option value="0">Sexo</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-1">
+                </div>
+                <div class="form-group col-md-2">
+                    <select id="selEstadoCivil" class="form-control">
+                        <option value="0">Estado Civil</option>
+                        <option value="1">Solter(a)</option>
+                        <option value="2">Casad(a)</option>
+                        <option value="3">Divorciad(a)</option>
+                        <option value="4">Viud(a)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <input type="text" class="form-control" id="txtNombres" placeholder="Dirección">
                 </div>
             </div>
