@@ -1,43 +1,98 @@
-$('[data-toggle=tab]').click(function () {
-  return false;}
-).addClass("text-muted");
+/** *************************************
+ * @author Alexander Antonio Soto Brito *
+ * @author Jaime Alberto Portillo Luna  *
+ * @author Jose Miguel Arevalo Moreira  *
+ * @copyright 2022 - 2025               *
+ * @version 1.0.0                       *
+ * @date 2022-06-05 12:32:21            *
+ ************************************* **/
+var globIdConsulta = 0;
 
-var validated = function(tab){
-  tab.unbind('click').removeClass('text-muted').addClass('green');
+function prevenir() {
+  document
+    .getElementById("formConsultas")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+    });
 }
 
-//validate inputs on click of button
-$('.btn-ok').click(function(){
-    
-    var allValid = true;
-    // get each input in this tab pane and validate
-    $(this).parents('.tab-pane').find('.form-control').each(function(i,e){
-         
-        // some condition(s) to validate each input
-        var len = $(e).val().length;
-        if (len>0){
-            // validation passed
-            allValid = true;
-        } else {
-            // validation failed
-            allValid = false;
-        }
-       
-    });
-  
-    if (allValid) {
-        var tabIndex = $(this).parents('.tab-pane').index();
-        validated($('[data-toggle]').eq(tabIndex+1));
-    }
-    
-});
+function ResetearControles() {
+  $("#cmbPaciente").val("0");
+  $("#txtMotivoConsulta").val("");
+  $("#txtPeso").val("");
+  $("#txtTalla").val("");
+  $("#txtTemperatura").val("");
+  $("#txtFreResp").val("");
+  $("#txtFreCar").val("");
+  $("#txtPresion").val("");
+  $("#txtFechCons").val("");
+  $("#txtObservacion").val("");
+  $("#txtDiagnostico").val("");
+  $("#txtReceta").val("");
+}
 
-// always validate first tab
-validated($('[data-toggle]').eq(0));
+function LlenarComboPacientes() {
+  $.post(
+    "../controlador/controlador_consultas.php",
+    { tipo: "obtenerCombo" },
+    function (respuesta) {
+      $("#cmbPaciente").html(respuesta.html);
+    },
+    "json"
+  );
+}
 
-// form submit
-$( "#myForm" ).submit(function( event ) {
-  console.log("Handler for .submit() called..");
-  console.log( $( this ).serialize() );
-  event.preventDefault();
-});
+function AgregarConsulta() {
+  prevenir();
+  let paciente = $("#cmbPaciente").val();
+  let motivo = $("#txtMotivoConsulta").val();
+  let peso = $("#txtPeso").val();
+  let talla = $("#txtTalla").val();
+  let temperatura = $("#txtTemperatura").val();
+  let frecResp = $("#txtFreResp").val();
+  let frecCard = $("#txtFreCar").val();
+  let presion = $("#txtPresion").val();
+  let fecha = $("#txtFechCons").val();
+  let observacion = $("#txtObservacion").val();
+  let diagnostico = $("#txtDiagnostico").val();
+  let receta = $("#txtReceta").val();
+  $.post(
+    "../controlador/controlador_consultas.php",
+    {
+      tipo: "agregar",
+      paciente: paciente,
+      motivo: motivo,
+      peso: peso,
+      talla: talla,
+      temperatura: temperatura,
+      frecResp: frecResp,
+      frecCard: frecCard,
+      presion: presion,
+      fecha: fecha,
+      observacion: observacion,
+      diagnostico: diagnostico,
+      receta: receta,
+    },
+    function (respuesta) {
+      if (respuesta.estado == 1) {
+        ResetearControles();
+        LlenarTablaConsultas();
+        alert(respuesta.mensaje);
+      } else {
+        alert(respuesta.mensaje);
+      }
+    },
+    "json"
+  );
+}
+
+function LlenarTablaConsultas() {
+  $.post(
+    "../controlador/controlador_consultas.php",
+    { tipo: "obtener" },
+    function (respuesta) {
+      $("#tblConsulta").html(respuesta.html);
+    },
+    "json"
+  );
+}
