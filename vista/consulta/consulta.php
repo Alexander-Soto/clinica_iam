@@ -26,31 +26,35 @@
     <div class="divTittle">
         <h1 class="titulo">Consulta</h1>
     </div>
+    <!-- Navegación de los tabs -->
+
     <div class="myDiv">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Identificación</a>
+                <a class="nav-link active" aria-current="page" href="#identificacion"  data-toggle="tab">Identificación</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Antecedentes</a>
+                <a class="nav-link disabled" href="#antecedentes" data-toggle="tab" tabindex="-1" aria-disabled="true">Antecedentes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Consulta</a>
+                <a class="nav-link disabled" href="#Consulta" data-toggle="tab" tabindex="-1" aria-disabled="true">Consulta</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Exploración Física</a>
+                <a class="nav-link disabled" href="#expfisica" data-toggle="tab" tabindex="-1" aria-disabled="true">Exploración Física</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Diagnóstico</a>
+                <a class="nav-link disabled" href="#Diagnóstico" data-toggle="tab" tabindex="-1" aria-disabled="true">Diagnóstico</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Tratamiento</a>
+                <a class="nav-link disabled" href="#Tratamiento" data-toggle="tab" tabindex="-1" aria-disabled="true">Tratamiento</a>
             </li>
         </ul>
         <br>
-        <form>
-            <div class="form-row">
 
+        <!-- Formulario Pacientes -->
+
+        <form class="tab-content" method="post" id="myForm">
+            <div class="form-row tab-pane active" id="identificacion">
                 <div class="form-outline col-md-5">
                     <input type="search" id="form1" class="form-control" placeholder="Paciente" />
                 </div>
@@ -70,7 +74,7 @@
             <br>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="txtNombres" placeholder="Nombre">
+                    <input type="text" class="form-control" required="" id="txtNombres" placeholder="Nombre">
                 </div>
                 <div class="form-group col-md-2">
                 </div>
@@ -79,7 +83,7 @@
                 </div>
                 <div class="form-group col-md-3 text-center">
 
-                    <button type="submit" class="btn btn-success" id="btnAggPaciente">Siguiente</button>
+                    <button type="button" class="btn btn-success btn-ok" id="btnAggPaciente">Siguiente</button>
                     <br>
                 </div>
             </div>
@@ -128,3 +132,11 @@
                     <input type="text" class="form-control" id="txtNombres" placeholder="Dirección">
                 </div>
             </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descripción"></textarea>
+                </div>
+            </div>
+
+            <!-- Formulario Antecedentes  -->
+           
