@@ -21,10 +21,10 @@ if ($_SESSION['usuario'] == '') {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="icon" href="../recursos/clinica.png">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="menu.css">
         <title>Clinica IAM</title>
@@ -47,16 +47,13 @@ if ($_SESSION['usuario'] == '') {
                         <a href="#" onclick=" CargarAgenda()"><img src="../recursos/agenda.png"> Agenda</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/factura.png"> Facturas</a>
+                        <a href="#" onclick="CargarFacturas()"><img src="../recursos/factura.png"> Facturas</a>
                     </li>
                     <li>
-                        <a href="#"  onclick="CargarVademecum()"><img src="../recursos/vademecum.png"> Vademecum</a>
+                        <a href="#" onclick="CargarVademecum()"><img src="../recursos/vademecum.png"> Vademecum</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../recursos/cie10.png"> CIE10</a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../recursos/servicios.png"> Servicios</a>
+                        <a href="#" onclick="CargarCIE10()"><img src="../recursos/cie10.png"> CIE10</a>
                     </li>
                 </ul>
                 <div style="padding: 20px;">

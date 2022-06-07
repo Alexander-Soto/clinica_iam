@@ -6,7 +6,7 @@ class Conexion {
         try {
             $usuario = "root";
             $clave = "ClinicaIam2022";
-            $server = "127.0.0.1";
+            $server = "localhost";
             $puerto = "27017";
             $base = "clinica_iam";
             $cadena = "mongodb://".$usuario.":".$clave."@".$server.":".$puerto."/".$base;

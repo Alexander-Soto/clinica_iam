@@ -25,12 +25,17 @@ if ($_SESSION['usuario'] == '') {
         <title>Clinica IAM</title>
     </head>
     <body>
+        <script>
+            $(document).ready(function() {
+                LlenarTablaPacientes();
+            });
+        </script>
         <div class="divTittle">
             <h1 class="titulo">Pacientes</h1>
         </div>
 
         <div class="myDiv">
-            <form>
+            <form id="formPacientes">
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label class="lbForm" for="txtNombres">Nombres: </label>
@@ -42,7 +47,7 @@ if ($_SESSION['usuario'] == '') {
                     </div>
                     <div class="form-group col-md-2 text-center">
                         <br>
-                        <button type="submit" class="btn btn-success" id="btnAggPaciente">Agregar</button>
+                        <button type="submit" class="btn btn-success" onclick="AgregarPaciente()" id="btnAggPaciente">Agregar</button>
                         <br>
                     </div>
                 </div>
@@ -57,7 +62,7 @@ if ($_SESSION['usuario'] == '') {
                     </div>
                     <div class="form-group col-md-2 text-center">
                         <br>
-                        <button type="submit" class="btn btn-warning" id="btnAggPaciente">Editar</button>
+                        <button type="submit" class="btn btn-warning" onclick="EditarPaciente()" id="btnAggPaciente">Editar</button>
                         <br>
                     </div>
                 </div>
@@ -68,7 +73,7 @@ if ($_SESSION['usuario'] == '') {
                     </div>
                     <div class="form-group col-md-2 text-center">
                         <br>
-                        <button type="submit" class="btn btn-danger" id="btnAggPaciente">Eliminar</button>
+                        <button type="submit" class="btn btn-danger" onclick="EliminarPaciente()" id="btnAggPaciente">Eliminar</button>
                         <br>
                     </div>
                 </div>
@@ -104,40 +109,30 @@ if ($_SESSION['usuario'] == '') {
                 </div>
             </form>
             <div class="row" style="padding: 20px;">
-                <table class="table table-sm">
-                    <caption>List of users</caption>
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-light">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="divTable">
+                    <table class="table table-sm">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>DUI</th>
+                                <th>Teléfono</th>
+                                <th>Dirección</th>
+                                <th>Ocupación</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th>Sexo</th>
+                                <th>Estado Civil</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-light" id="tblPacientes"></tbody>
+                    </table>
+                </div>
             </div>
-        </div>
+        </div>  
+
+        <script type="text/javascript" src="pacientes/js/pacientes.js"></script>
     </body>
+
 </html>
 
 <?php 
