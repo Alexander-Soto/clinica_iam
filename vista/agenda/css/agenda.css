@@ -40,3 +40,16 @@ body {
   background-color: #d48712;
   color: black;
 }
+
+.divTable {
+  padding: 0% !important;
+  margin: 0% !important;
+  width: 100% !important;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
+.thead-dark {
+  position: sticky;
+  top: 0;
+}

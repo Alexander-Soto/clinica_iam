@@ -47,9 +47,6 @@ if ($_SESSION['usuario'] == '') {
                         <a href="#" onclick=" CargarAgenda()"><img src="../recursos/agenda.png"> Agenda</a>
                     </li>
                     <li>
-                        <a href="#" onclick="CargarFacturas()"><img src="../recursos/factura.png"> Facturas</a>
-                    </li>
-                    <li>
                         <a href="#" onclick="CargarVademecum()"><img src="../recursos/vademecum.png"> Vademecum</a>
                     </li>
                     <li>

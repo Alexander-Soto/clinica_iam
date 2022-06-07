@@ -23,10 +23,6 @@ function CargarAgenda() {
   $("#divContenido").load("agenda/agenda.php");
 }
 
-function CargarFacturas() {
-  $("#divContenido").load("facturas/facturas.php");
-}
-
 function CargarVademecum() {
   $("#divContenido").load("vademecum/vademecum.php");
 }
