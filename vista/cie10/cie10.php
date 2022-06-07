@@ -35,94 +35,59 @@ if ($_SESSION['usuario'] == '') {
         </div>
 
         <div class="myDiv">
-            <form id="formVademecum">
+            <form id="formCie10">
                 <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label class="lbForm" for="txtPrincipioActivo">Principio Activo: </label>
-                        <input type="text" class="form-control" id="txtPrincipioActivo" placeholder="Principio Activo">
+                    <div class="form-group col-md-3"></div>
+                    <div class="form-group col-md-6">
+                        <label class="lbForm" for="txtCodigo">Código: </label>
+                        <input type="text" class="form-control" id="txtCodigo" placeholder="Precauciones">
                     </div>
-                    <div class="form-group col-md-3">
-                        <label class="lbForm" for="txtPrecauciones">Precauciones </label>
-                        <input type="text" class="form-control" id="txtPrecauciones" placeholder="Precauciones">
+                    <div class="form-group col-md-3"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3"></div>
+                    <div class="form-group col-md-6">
+                        <label class="lbForm" for="texaDescrip">Descripción: </label>
+                        <textarea class="form-control" id="texaDescrip" placeholder="Descripción: "></textarea>
                     </div>
-                    <div class="form-group col-md-3">
-                        <label class="lbForm" for="txtAccionTeraupeutica">Accion Terapeutica: </label>
-                        <input type="text" class="form-control" id="txtAccionTeraupeutica" placeholder="Accion Teraupeutica">
+                    <div class="form-group col-md-3"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3"></div>
+                    <div class="form-group col-md-2 text-center">
+                        <br>
+                        <button type="submit" class="btn btn-success" onclick="AgregarCie10()">Agregar</button>
+                        <br>
                     </div>
                     <div class="form-group col-md-2 text-center">
                         <br>
-                        <button type="submit" class="btn btn-success" onclick="AgregarVademecum()" id="btnAggPaciente">Agregar</button>
+                        <button type="submit" class="btn btn-warning" onclick="EditarCie10()">Editar</button>
                         <br>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label class="lbForm" for="txtDosificacion">Dosificacion: </label>
-                        <input type="text" class="form-control" id="txtDosificacion" placeholder="Dosificacion">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label class="lbForm" for="txtIndicaciones">Indicaciones: </label>
-                        <input type="text" class="form-control" id="txtIndicaciones" placeholder="Indicaciones">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label class="lbForm" for="txtInteracciones">Interacciones: </label>
-                        <input type="text" class="form-control" id="txtInteracciones" placeholder="Interacciones">
                     </div>
                     <div class="form-group col-md-2 text-center">
                         <br>
-                        <button type="submit" class="btn btn-warning" onclick="EditarVademecum()" id="btnAggPaciente">Editar</button>
+                        <button type="submit" class="btn btn-danger" onclick="EliminarCie10()">Eliminar</button>
                         <br>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label class="lbForm" for="txtMarca">Marca: </label>
-                        <input type="text" class="form-control" id="txtMarca" placeholder="Marca">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label class="lbForm" for="txtContraindicaciones">Contra Indicaciones: </label>
-                        <input type="text" class="form-control" id="txtContraindicaciones" placeholder="Contra Indicaciones">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label class="lbForm" for="txtPropiedades">Propiedades: </label>
-                        <input type="text" class="form-control" id="txtPropiedades" placeholder="Propiedades">
-                    </div>
-                    <div class="form-group col-md-2 text-center">
-                        <br>
-                        <button type="submit" class="btn btn-danger" onclick="EliminarVademecum()" id="btnAggPaciente">Eliminar</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-5">
-                        <label class="lbForm" for="txtSobreDosificacion">Sobre Dosificacion: </label>
-                        <input type="text" class="form-control" id="txtSobreDosificacion" placeholder="Contra Indicaciones">
-                    </div>
-                    <div class="form-group col-md-5">
-                        <label class="lbForm" for="txtReaccionesAdversas">Reacciones Adversas: </label>
-                        <input type="text" class="form-control" id="txtReaccionesAdversas" placeholder="Reacciones Adversas">
-                    </div>
-                    <div class="form-group col-md-2 text-center"></div>
-                </div>               
+                    <div class="form-group col-md-3"></div>
+                </div>                     
             </form>
             <div class="row" style="padding: 20px;">
-                <table class="table table-sm">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Principio Activo</th>
-                            <th>Accion Terapeutica</th>
-                            <th>Dosificacion</th>
-                            <th>Indicaciones</th>
-                            <th>Marca</th>
-                            <th>Propiedades</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-light" id="tblVademecum"></tbody>
-                </table>
+                <div class="divTable">
+                    <table class="table table-sm">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Código</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-light" id="tblCie10"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <script type="text/javascript" src="vademecum/js/vademecum.js"></script>
+        <script type="text/javascript" src="cie10/js/cie10.js"></script>
     </body>
 </html>
 
