@@ -139,4 +139,14 @@
             </div>
 
             <!-- Formulario Antecedentes  -->
+
+            <!-- Formulario Consulta -->
+
+            <!-- Formulario Exploracion física -->
+
+            <!-- Formulario Diagnóstico -->
+
+            <!-- Formulario Tratamiento -->
+
+
            
